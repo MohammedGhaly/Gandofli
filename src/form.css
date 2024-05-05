@@ -1,0 +1,91 @@
+.submit-button {
+  background-color: #161616;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 15px;
+  width: 50%;
+  border-radius: 8px;
+}
+
+.g-form {
+  padding: 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.form-title {
+  font-size: 1.3em;
+}
+
+.g-form input,
+.g-form select {
+  width: 85%;
+  height: 40px;
+  background-color: #161616;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1.2rem;
+  border: 1px solid #292929;
+  transition: border 0.25s ease-in-out;
+}
+
+.g-form input:focus,
+.g-form select:focus {
+  border: 1px solid hsl(286, 100%, 85%);
+}
+
+.number-input::-webkit-inner-spin-button,
+.number-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+select {
+  border: 1px solid #ccc; /* Add border */
+  border-radius: 5px; /* Add border radius */
+}
+
+select option {
+  color: white;
+  background-color: #0a0a0a; /* Background color of options */
+  color: #e4e4e4; /* Text color of options */
+  padding: 8px; /* Add padding to options */
+}
+
+/* Style the dropdown arrow */
+select:after {
+  content: "▼";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.submit-btn {
+  background-color: #2e1b25;
+  color: #c79ccf;
+  border: none;
+  height: 40px;
+  font-size: 1.3rem;
+  border-radius: 8px;
+  grid-column: span 2;
+  margin-right: 25%;
+  margin-left: 25%;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 600px) {
+  .g-form input,
+  .g-form select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1rem;
+    border: 1px solid #292929;
+    transition: border 0.25s ease-in-out;
+  }
+}
