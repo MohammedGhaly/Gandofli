@@ -57,7 +57,6 @@ header {
 
 .result-container {
   width: 50%;
-  height: 100%;
   font-size: 2.2rem;
   font-weight: 500;
   padding: 10px;
@@ -92,8 +91,11 @@ span {
 }
 
 @media screen and (max-width: 600px) {
-  section {
+  .main {
     flex-direction: column-reverse;
+    height: calc(100vh - 90px - 10px);
+    justify-content: center;
+    align-items: center;
   }
 
   .form-container {
@@ -102,6 +104,7 @@ span {
   .result-container,
   .form-container {
     width: 100%;
+    min-height: 220px;
   }
 
   .form-container h1 {
@@ -112,5 +115,21 @@ span {
 
   header {
     font-size: 1.8rem;
+  }
+
+  .result-container p {
+    font-size: 2.24rem;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .result-container p {
+    font-size: 1.6rem;
+  }
+
+  .form-container h1 {
+    margin-left: 10px;
+    padding: 10px;
+    font-size: 1.4rem;
   }
 }
