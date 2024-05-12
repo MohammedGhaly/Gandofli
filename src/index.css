@@ -88,6 +88,8 @@ span {
   padding: 10px;
   background-color: #2e1b25;
   color: #c79ccf;
+  cursor: pointer;
+  box-shadow: 5px 5px 7px #0f090c;
 }
 
 @media screen and (max-width: 600px) {

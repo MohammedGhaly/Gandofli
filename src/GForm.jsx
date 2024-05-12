@@ -1,27 +1,6 @@
 import { useState } from "react";
 
 const url = `https://basharelmetwali.pythonanywhere.com/predict`;
-const trialData = {
-  sex: ["M"],
-  length: [0.645],
-  diameter: [0.475],
-  height: [0.155],
-  "whole weight": [1.238],
-  "shucked weight": [0.6185],
-  "viscera weight": [0.3125],
-  "shell weight": [0.3005],
-};
-
-// const trialData = {
-//   sex: ["M", "M"],
-//   length: [0.645, 0.58],
-//   diameter: [0.475, 0.46],
-//   height: [0.155, 0.16],
-//   "whole weight": [1.238, 0.983],
-//   "shucked weight": [0.6185, 0.4785],
-//   "viscera weight": [0.3125, 0.2195],
-//   "shell weight": [0.3005, 0.275],
-// };
 
 function GForm({ setResult, setIsLoading }) {
   const [sex, setSex] = useState("m");
@@ -32,7 +11,6 @@ function GForm({ setResult, setIsLoading }) {
   const [shuckedWeight, setShuckedWeight] = useState(null);
   const [visceraWeight, setVisceraWeight] = useState(null);
   const [shellWeight, setShellWeight] = useState(null);
-  // const [rings, setRings] = useState(null);
 
   function getFormData() {
     return {
@@ -57,7 +35,6 @@ function GForm({ setResult, setIsLoading }) {
         body: JSON.stringify(getFormData()),
       });
       const data = await response.json();
-      console.log(data);
       return data.Prediction[0];
     } catch (error) {
       console.error("Error:", error);
@@ -169,15 +146,6 @@ function GForm({ setResult, setIsLoading }) {
           setShellWeight(Number(e.target.value));
         }}
       />
-      {/* <input
-        className="number-input"
-        type="number"
-        name="rings"
-        placeholder="rings"
-        onChange={(e) => {
-          setRings(e.target.value);
-        }}
-      /> */}
       <button className="submit-btn">Submit</button>
     </form>
   );
